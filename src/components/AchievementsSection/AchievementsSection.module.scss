@@ -1,0 +1,107 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.achievementsSection {
+  background: linear-gradient(180deg, #FFF5F5 0%, #FFE8E8 100%);
+  padding: 80px 0;
+
+  @include mobile {
+    padding: 60px 0;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $spacing-md;
+  text-align: center;
+}
+
+.sectionTitle {
+  font-size: 48px;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 0;
+
+  @include mobile {
+    font-size: 32px;
+    margin-bottom: 0;
+  }
+}
+
+.mainStats {
+  margin-bottom: 60px;
+
+  @include mobile {
+    margin-bottom: 40px;
+  }
+}
+
+.statsNumber {
+  font-size: 48px;
+  font-weight: bold;
+  color: #FF6B35;
+  margin-bottom: 16px;
+  line-height: 1.4;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  @include mobile {
+    font-size: 32px;
+    margin-bottom: 12px;
+    gap: 4px;
+  }
+
+  .statsLabel {
+    font-size: 32px;
+
+    @include mobile {
+      font-size: 20px;
+    }
+  }
+
+  .number {
+    font-size: 64px;
+
+    @include mobile {
+      font-size: 40px;
+    }
+  }
+
+  .unit {
+    font-size: 32px;
+
+    @include mobile {
+      font-size: 20px;
+    }
+  }
+}
+
+.statsDescription {
+  font-size: 28px;
+  color: #FF6B35;
+  font-weight: bold;
+
+  @include mobile {
+    font-size: 18px;
+  }
+}
+
+.badgeContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+
+  @include mobile {
+    margin-top: 30px;
+  }
+}
+
+.achievementImage {
+  max-width: 100%;
+  height: auto;
+}

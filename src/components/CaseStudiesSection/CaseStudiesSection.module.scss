@@ -1,0 +1,403 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+// カスタムカラー（導入事例セクション用）
+$color-case-bg: #ffeee8;
+$color-case-card-bg: #fffef5;
+$color-case-border: #ff7e3a;
+$color-challenge-badge: #ff5757;
+$color-bar-before: #d9d9d9;
+$color-bar-after-start: #ff7e3a;
+$color-bar-after-end: #ff5722;
+$color-savings: #ff5757;
+$color-nav-button: #ff5757;
+
+.caseStudiesSection {
+  padding: 80px 0 100px;
+  background: linear-gradient(180deg, $color-case-bg 0%, #fff5f0 100%);
+
+  @include mobile {
+    padding: 60px 0 80px;
+  }
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+// タイトル
+.sectionTitle {
+  font-size: 48px;
+  font-weight: $font-weight-bold;
+  text-align: center;
+  color: $color-text-primary;
+  margin-bottom: 60px;
+
+  @include mobile {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+}
+
+// カルーセルラッパー
+.carouselWrapper {
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  @include mobile {
+    max-width: 100%;
+  }
+}
+
+// Swiper
+.swiper {
+  padding: 20px 80px 80px;
+
+  @include mobile {
+    padding: 20px 60px 70px;
+  }
+}
+
+// カルーセルカード
+.caseCard {
+  background: $color-case-card-bg;
+  border: 3px solid $color-case-border;
+  border-radius: 24px;
+  padding: 50px 60px;
+  box-shadow: 0 10px 30px rgba(255, 126, 58, 0.15);
+  min-height: 550px;
+
+  @include mobile {
+    padding: 30px 20px;
+    min-height: auto;
+  }
+}
+
+// 会社情報
+.companyInfo {
+  margin-bottom: 30px;
+}
+
+.companyName {
+  font-size: 32px;
+  font-weight: $font-weight-bold;
+  color: $color-text-primary;
+  margin-bottom: 8px;
+
+  @include mobile {
+    font-size: 28px;
+  }
+}
+
+.employeeCount {
+  font-size: 18px;
+  color: $color-text-secondary;
+
+  @include mobile {
+    font-size: 16px;
+  }
+}
+
+// 課題リスト
+.challengesList {
+  background: #fffbeb;
+  border-radius: 12px;
+  padding: 24px 20px;
+  margin-bottom: 30px;
+}
+
+.challengeItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 14px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include mobile {
+    margin-bottom: 12px;
+  }
+}
+
+.challengeBadge {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: $color-challenge-badge;
+  color: $color-white;
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: $font-weight-bold;
+
+  @include mobile {
+    width: 44px;
+    height: 44px;
+    font-size: 13px;
+  }
+}
+
+.challengeText {
+  flex: 1;
+  font-size: 16px;
+  line-height: 1.6;
+  color: $color-text-primary;
+  padding-top: 12px;
+
+  @include mobile {
+    font-size: 14px;
+    padding-top: 10px;
+  }
+}
+
+// 効果表示
+.effectSection {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+
+  @include mobile {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
+.effectLeft {
+  flex: 1;
+}
+
+.effectRight {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.comparisonBars {
+  // margin-bottom removed for flex layout
+}
+
+.barRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.barLabel {
+  font-size: 16px;
+  font-weight: $font-weight-medium;
+  color: $color-text-primary;
+  min-width: 60px;
+
+  @include mobile {
+    font-size: 14px;
+    min-width: 50px;
+  }
+}
+
+.barContainer {
+  flex: 1;
+  height: 40px;
+  background: #f5f5f5;
+  border-radius: 20px;
+  overflow: hidden;
+
+  @include mobile {
+    height: 32px;
+  }
+}
+
+.bar {
+  height: 100%;
+  transition: width 0.8s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 16px;
+  position: relative;
+}
+
+.barBefore {
+  width: 100%;
+  background: $color-bar-before;
+}
+
+.barAfterWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.barAfterLeft {
+  flex: 1;
+  height: 100%;
+  background: $color-bar-before;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+}
+
+.barAfterRight {
+  flex: 1;
+  height: 100%;
+  background: linear-gradient(90deg, $color-bar-after-start 0%, $color-bar-after-end 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+}
+
+.barText {
+  font-size: 13px;
+  font-weight: $font-weight-bold;
+  color: $color-white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+
+  @include mobile {
+    font-size: 11px;
+  }
+}
+
+// 削減効果表示
+.savingsDisplay {
+  text-align: center;
+  min-width: 200px;
+}
+
+.savingsPeriod {
+  font-size: 18px;
+  color: $color-text-primary;
+  margin-bottom: 8px;
+  font-weight: $font-weight-medium;
+
+  @include mobile {
+    font-size: 16px;
+  }
+}
+
+.savingsAmount {
+  font-size: 42px;
+  font-weight: $font-weight-bold;
+  color: $color-savings;
+  line-height: 1.2;
+
+  @include mobile {
+    font-size: 32px;
+  }
+}
+
+// ナビゲーションボタン
+.navButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 60px;
+  background: $color-nav-button;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all $transition-base;
+  box-shadow: 0 4px 12px rgba(255, 87, 87, 0.3);
+
+  &:hover {
+    background: #e04848;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 6px 16px rgba(255, 87, 87, 0.4);
+  }
+
+  &:active {
+    transform: translateY(-50%) scale(0.95);
+  }
+
+  &.swiper-button-disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+
+    &:hover {
+      transform: translateY(-50%) scale(1);
+    }
+  }
+
+  @include mobile {
+    width: 48px;
+    height: 48px;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.navPrev {
+  left: 0;
+
+  @include mobile {
+    left: 5px;
+  }
+}
+
+.navNext {
+  right: 0;
+
+  @include mobile {
+    right: 5px;
+  }
+}
+
+// ページネーション
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 40px;
+
+  @include mobile {
+    margin-top: 30px;
+    gap: 10px;
+  }
+
+  :global {
+    .swiper-pagination-bullet {
+      width: 14px;
+      height: 14px;
+      background: #ffc0cb;
+      opacity: 0.5;
+      transition: all $transition-base;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      @include mobile {
+        width: 12px;
+        height: 12px;
+      }
+    }
+
+    .swiper-pagination-bullet-active {
+      background: $color-nav-button;
+      opacity: 1;
+      transform: scale(1.2);
+    }
+  }
+}

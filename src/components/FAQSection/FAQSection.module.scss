@@ -1,0 +1,151 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+// カスタムカラー（FAQセクション用）
+$color-faq-bg: #fff5f0;
+$color-faq-card-bg: #ffffff;
+$color-faq-card-border: #ffccb8;
+$color-faq-question: #ff7e3a;
+$color-faq-icon: #ff7e3a;
+
+.faqSection {
+  padding: 80px 0 100px;
+  background: linear-gradient(180deg, #fff0eb 0%, $color-faq-bg 100%);
+
+  @include mobile {
+    padding: 60px 0 80px;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.sectionTitle {
+  font-size: 48px;
+  font-weight: $font-weight-bold;
+  text-align: center;
+  color: $color-text-primary;
+  margin-bottom: 60px;
+
+  @include mobile {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+}
+
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.faqItem {
+  background: $color-faq-card-bg;
+  border: 2px solid $color-faq-card-border;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all $transition-base;
+
+  &:hover {
+    box-shadow: 0 4px 16px rgba(255, 126, 58, 0.1);
+  }
+
+  &.open {
+    .faqAnswer {
+      max-height: 500px;
+      padding: 0 24px 24px;
+      opacity: 1;
+
+      @include mobile {
+        padding: 0 20px 20px;
+      }
+    }
+
+    .icon {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.faqQuestion {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color $transition-base;
+
+  &:hover {
+    background-color: rgba(255, 126, 58, 0.03);
+  }
+
+  @include mobile {
+    padding: 20px;
+  }
+}
+
+.questionText {
+  flex: 1;
+  font-size: 20px;
+  font-weight: $font-weight-bold;
+  color: $color-text-primary;
+  line-height: 1.5;
+
+  @include mobile {
+    font-size: 16px;
+  }
+}
+
+.icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-faq-icon;
+  transition: transform $transition-base;
+
+  @include mobile {
+    width: 32px;
+    height: 32px;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.faqAnswer {
+  max-height: 0;
+  padding: 0 24px;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+
+  @include mobile {
+    padding: 0 20px;
+  }
+}
+
+.answerContent {
+  p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: $color-text-secondary;
+    margin: 0;
+
+    @include mobile {
+      font-size: 14px;
+    }
+  }
+}

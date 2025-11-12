@@ -1,0 +1,67 @@
+// ==========================================
+// カラー定義
+// ==========================================
+$color-primary: #1da1f2;        // メインブルー（無料相談ボタン）
+$color-secondary: #2d3748;      // ダークグレー（資料請求ボタン）
+$color-text-primary: #1a202c;   // メインテキスト
+$color-text-secondary: #4a5568; // サブテキスト
+$color-white: #ffffff;
+$color-black: #000000;
+$color-border: #e2e8f0;
+$color-shadow: rgba(0, 0, 0, 0.1);
+
+// ==========================================
+// タイポグラフィ
+// ==========================================
+$font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+$font-size-base: 16px;
+$font-size-sm: 14px;
+$font-size-lg: 18px;
+$font-size-xl: 20px;
+
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+// ==========================================
+// スペーシング
+// ==========================================
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 32px;
+$spacing-2xl: 48px;
+
+// ==========================================
+// ブレークポイント
+// ==========================================
+$breakpoint-mobile: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+$breakpoint-wide: 1280px;
+
+// ==========================================
+// ヘッダー設定
+// ==========================================
+$header-height: 80px;
+$header-height-mobile: 64px;
+$header-z-index: 1000;
+
+// ==========================================
+// ボーダー・影
+// ==========================================
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+$border-radius-lg: 12px;
+$border-radius-full: 9999px;
+
+$box-shadow-sm: 0 1px 3px $color-shadow;
+$box-shadow-md: 0 4px 6px $color-shadow;
+$box-shadow-lg: 0 10px 15px $color-shadow;
+
+// ==========================================
+// トランジション
+// ==========================================
+$transition-base: 0.3s ease;
+$transition-fast: 0.15s ease;

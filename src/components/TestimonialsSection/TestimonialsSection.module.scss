@@ -1,0 +1,272 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+// カスタムカラー（受講者の声セクション用）
+$color-testimonials-bg: #ffe8e0;
+$color-testimonials-card-bg: #ffffff;
+$color-testimonials-card-border: #ffccb8;
+$color-subtitle: #ff7e3a;
+$color-highlight: #ff7e3a;
+$color-nav-button: #ff5757;
+
+.testimonialsSection {
+  padding: 80px 0 100px;
+  background: linear-gradient(180deg, $color-testimonials-bg 0%, #fff0eb 100%);
+
+  @include mobile {
+    padding: 60px 0 80px;
+  }
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+// サブタイトル
+.subtitle {
+  font-size: 16px;
+  font-weight: $font-weight-medium;
+  text-align: center;
+  color: $color-subtitle;
+  margin-bottom: 12px;
+
+  @include mobile {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+}
+
+// タイトル
+.sectionTitle {
+  font-size: 48px;
+  font-weight: $font-weight-bold;
+  text-align: center;
+  color: $color-text-primary;
+  margin-bottom: 60px;
+
+  @include mobile {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+}
+
+// カルーセルラッパー
+.carouselWrapper {
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  @include mobile {
+    max-width: 100%;
+  }
+}
+
+// Swiper
+.swiper {
+  padding: 20px 80px 80px;
+
+  @include mobile {
+    padding: 20px 60px 70px;
+  }
+}
+
+// カルーセルカード
+.testimonialCard {
+  background: $color-testimonials-card-bg;
+  border: 3px solid $color-testimonials-card-border;
+  border-radius: 24px;
+  padding: 40px 50px;
+  box-shadow: 0 8px 24px rgba(255, 126, 58, 0.12);
+  min-height: 280px;
+
+  @include mobile {
+    padding: 30px 20px;
+    min-height: auto;
+  }
+}
+
+.cardContent {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+
+  @include mobile {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
+// アバターセクション
+.avatarSection {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  @include mobile {
+    width: 80px;
+    height: 80px;
+
+    svg {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+.name {
+  font-size: 16px;
+  font-weight: $font-weight-medium;
+  color: $color-text-primary;
+
+  @include mobile {
+    font-size: 14px;
+  }
+}
+
+// 感想コンテンツ
+.testimonialContent {
+  flex: 1;
+}
+
+.testimonialTitle {
+  font-size: 20px;
+  font-weight: $font-weight-bold;
+  color: $color-text-primary;
+  line-height: 1.6;
+  margin-bottom: 16px;
+
+  @include mobile {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+}
+
+.highlight {
+  color: $color-highlight;
+}
+
+.testimonialText {
+  font-size: 16px;
+  line-height: 1.8;
+  color: $color-text-secondary;
+
+  @include mobile {
+    font-size: 14px;
+  }
+}
+
+// ナビゲーションボタン
+.navButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 60px;
+  background: $color-nav-button;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all $transition-base;
+  box-shadow: 0 4px 12px rgba(255, 87, 87, 0.3);
+
+  &:hover {
+    background: #e04848;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 6px 16px rgba(255, 87, 87, 0.4);
+  }
+
+  &:active {
+    transform: translateY(-50%) scale(0.95);
+  }
+
+  &.swiper-button-disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+
+    &:hover {
+      transform: translateY(-50%) scale(1);
+    }
+  }
+
+  @include mobile {
+    width: 48px;
+    height: 48px;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.navPrev {
+  left: 0;
+
+  @include mobile {
+    left: 5px;
+  }
+}
+
+.navNext {
+  right: 0;
+
+  @include mobile {
+    right: 5px;
+  }
+}
+
+// ページネーション
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 40px;
+
+  @include mobile {
+    margin-top: 30px;
+    gap: 10px;
+  }
+
+  :global {
+    .swiper-pagination-bullet {
+      width: 14px;
+      height: 14px;
+      background: #ffc0cb;
+      opacity: 0.5;
+      transition: all $transition-base;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      @include mobile {
+        width: 12px;
+        height: 12px;
+      }
+    }
+
+    .swiper-pagination-bullet-active {
+      background: $color-nav-button;
+      opacity: 1;
+      transform: scale(1.2);
+    }
+  }
+}

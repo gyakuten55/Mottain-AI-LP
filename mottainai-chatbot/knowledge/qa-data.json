@@ -1,0 +1,280 @@
+{
+  "welcome": {
+    "id": "welcome",
+    "type": "message",
+    "text": "「あなたの会社の\"モッタイナイ\"をなくす」\n\n株式会社Meta Heroesが提供する、90日でAI活用による経営刷新を実現するサービスについてご案内します。\n\nお知りになりたい内容を選択してください。",
+    "options": [
+      {"id": "subsidy_overview", "label": "助成金制度について"},
+      {"id": "pricing_overview", "label": "価格・プランについて"},
+      {"id": "plan90_overview", "label": "90日プランの詳細"},
+      {"id": "contact_overview", "label": "お問い合わせ"}
+    ]
+  },
+
+  "subsidy_overview": {
+    "id": "subsidy_overview",
+    "type": "message",
+    "text": "**助成金制度のご案内**\n\n人材開発支援助成金を活用することで、研修費用の大部分を補助金でカバーできます。\n\n企業規模によって補助率が異なります。",
+    "options": [
+      {"id": "subsidy_sme", "label": "中小企業の場合（75%補助）"},
+      {"id": "subsidy_large", "label": "大企業の場合（60%補助）"},
+      {"id": "subsidy_calculation", "label": "実質負担額のシミュレーション"},
+      {"id": "back_to_main", "label": "メインメニューに戻る"}
+    ]
+  },
+
+  "subsidy_sme": {
+    "id": "subsidy_sme",
+    "type": "message",
+    "text": "**中小企業向け助成金**\n\n• 補助率：経費の **75%**\n• 上限額：**30万円/人**\n\n例）幹部層向けAI活用技能研修（40万円/名）の場合\n→ 助成金：30万円\n→ 実質負担：10万円/名",
+    "options": [
+      {"id": "subsidy_calculation", "label": "プラン別の実質負担額を見る"},
+      {"id": "pricing_overview", "label": "価格・プラン一覧を見る"},
+      {"id": "contact_overview", "label": "お問い合わせする"},
+      {"id": "back_to_main", "label": "メインメニューに戻る"}
+    ]
+  },
+
+  "subsidy_large": {
+    "id": "subsidy_large",
+    "type": "message",
+    "text": "**大企業向け助成金**\n\n• 補助率：経費の **60%**\n• 上限額：**20万円/人**\n\n例）幹部層向けAI活用技能研修（40万円/名）の場合\n→ 助成金：20万円\n→ 実質負担：20万円/名",
+    "options": [
+      {"id": "subsidy_calculation", "label": "プラン別の実質負担額を見る"},
+      {"id": "pricing_overview", "label": "価格・プラン一覧を見る"},
+      {"id": "contact_overview", "label": "お問い合わせする"},
+      {"id": "back_to_main", "label": "メインメニューに戻る"}
+    ]
+  },
+
+  "subsidy_calculation": {
+    "id": "subsidy_calculation",
+    "type": "message",
+    "text": "**助成金適用後の実質負担額（中小企業の場合）**\n\n【おためし5人プラン】\n通常：200万円 → 実質：約50万円\n\n【こだわり10人プラン】\n通常：400万円 → 実質：約100万円\n\n【よくばり15人プラン】\n通常：600万円 → 実質：約200万円\n\n※助成金は申請・審査が必要です",
+    "options": [
+      {"id": "pricing_overview", "label": "各プランの詳細を見る"},
+      {"id": "contact_overview", "label": "助成金申請について相談する"},
+      {"id": "back_to_main", "label": "メインメニューに戻る"}
+    ]
+  },
+
+  "pricing_overview": {
+    "id": "pricing_overview",
+    "type": "message",
+    "text": "**価格・プラン一覧**\n\n3つのパッケージプランと、個別サービスをご用意しています。\n\nまずはどちらをご覧になりますか？",
+    "options": [
+      {"id": "package_plans", "label": "パッケージプラン（5人/10人/15人）"},
+      {"id": "service_individual", "label": "個別サービス（研修・コンサル）"},
+      {"id": "subsidy_overview", "label": "助成金制度を確認する"},
+      {"id": "back_to_main", "label": "メインメニューに戻る"}
+    ]
+  },
+
+  "package_plans": {
+    "id": "package_plans",
+    "type": "message",
+    "text": "**パッケージプラン一覧**\n\n助成金適用後の実質負担額も併記しています。",
+    "options": [
+      {"id": "plan_trial5", "label": "おためし5人プラン（200万円→約50万円）"},
+      {"id": "plan_standard10", "label": "こだわり10人プラン（400万円→約100万円）"},
+      {"id": "plan_premium15", "label": "よくばり15人プラン（600万円→約200万円）"},
+      {"id": "pricing_overview", "label": "価格メニューに戻る"}
+    ]
+  },
+
+  "plan_trial5": {
+    "id": "plan_trial5",
+    "type": "message",
+    "text": "**おためし5人プラン**\n\n【内容】\n• 経営者向けパーソナルAIトレーニング × 1名\n• 幹部層向けAI活用技能研修 × 5名\n• AI活用戦略コンサルティング × 1ヶ月\n\n【価格】\n通常：200万円（税別）\n助成金後：約50万円（中小企業の場合）\n\n【対象】\nAI導入を検討中の企業様向け",
+    "options": [
+      {"id": "plan90_overview", "label": "90日プランの流れを見る"},
+      {"id": "contact_overview", "label": "このプランで相談する"},
+      {"id": "package_plans", "label": "他のプランを見る"},
+      {"id": "back_to_main", "label": "メインメニューに戻る"}
+    ]
+  },
+
+  "plan_standard10": {
+    "id": "plan_standard10",
+    "type": "message",
+    "text": "**こだわり10人プラン**\n\n【内容】\n• 経営者向けパーソナルAIトレーニング × 1名\n• 幹部層向けAI活用技能研修 × 10名\n• AI活用戦略コンサルティング × 1ヶ月\n\n【価格】\n通常：400万円（税別）\n助成金後：約100万円（中小企業の場合）\n\n【対象】\n本格的にAI活用を進めたい企業様向け",
+    "options": [
+      {"id": "plan90_overview", "label": "90日プランの流れを見る"},
+      {"id": "contact_overview", "label": "このプランで相談する"},
+      {"id": "package_plans", "label": "他のプランを見る"},
+      {"id": "back_to_main", "label": "メインメニューに戻る"}
+    ]
+  },
+
+  "plan_premium15": {
+    "id": "plan_premium15",
+    "type": "message",
+    "text": "**よくばり15人プラン**\n\n【内容】\n• 経営者向けパーソナルAIトレーニング × 1名\n• 幹部層向けAI活用技能研修 × 15名\n• AI活用戦略コンサルティング × 3ヶ月\n\n【価格】\n通常：600万円（税別）\n助成金後：約200万円（中小企業の場合）\n\n【対象】\n若手を含む全社展開を目指す企業様向け",
+    "options": [
+      {"id": "plan90_overview", "label": "90日プランの流れを見る"},
+      {"id": "contact_overview", "label": "このプランで相談する"},
+      {"id": "package_plans", "label": "他のプランを見る"},
+      {"id": "back_to_main", "label": "メインメニューに戻る"}
+    ]
+  },
+
+  "service_individual": {
+    "id": "service_individual",
+    "type": "message",
+    "text": "**個別サービス**\n\n必要なサービスを個別にご提供することも可能です。",
+    "options": [
+      {"id": "service_personal_training", "label": "経営者向けパーソナルAIトレーニング"},
+      {"id": "service_staff_training", "label": "幹部層向けAI活用技能研修"},
+      {"id": "service_consulting", "label": "AI活用戦略コンサルティング"},
+      {"id": "pricing_overview", "label": "価格メニューに戻る"}
+    ]
+  },
+
+  "service_personal_training": {
+    "id": "service_personal_training",
+    "type": "message",
+    "text": "**経営者向けパーソナルAIトレーニング**\n\n【内容】\n• AI基礎知識の習得\n• 産業変化の理解\n• 活用事例の学習\n• 導入計画設計\n• 全8回のオンライン研修\n\n【価格】\n¥980,000（税別）\n\n【形式】\nオンライン（1on1形式）",
+    "options": [
+      {"id": "plan90_overview", "label": "90日プランの流れを見る"},
+      {"id": "contact_overview", "label": "このサービスで相談する"},
+      {"id": "service_individual", "label": "他のサービスを見る"},
+      {"id": "back_to_main", "label": "メインメニューに戻る"}
+    ]
+  },
+
+  "service_staff_training": {
+    "id": "service_staff_training",
+    "type": "message",
+    "text": "**幹部層向けAI活用技能研修**\n\n【内容】\n• AI基礎知識\n• プロンプト設計技術\n• 業務自動化手法\n• 資料作成効率化\n• 実践的なハンズオン\n\n【価格】\n¥400,000/名（税込）\n※助成金利用で最大75%補助\n\n【形式】\n集合研修またはオンライン",
+    "options": [
+      {"id": "subsidy_overview", "label": "助成金について詳しく知る"},
+      {"id": "contact_overview", "label": "このサービスで相談する"},
+      {"id": "service_individual", "label": "他のサービスを見る"},
+      {"id": "back_to_main", "label": "メインメニューに戻る"}
+    ]
+  },
+
+  "service_consulting": {
+    "id": "service_consulting",
+    "type": "message",
+    "text": "**AI活用戦略コンサルティング**\n\n【内容】\n• 経営戦略へのAI組み込み\n• 営業力強化支援\n• 新規事業構築支援\n• 継続的な伴走支援\n\n【価格】\n¥500,000/月（税別）\n\n【期間】\n1ヶ月〜（推奨：3ヶ月以上）",
+    "options": [
+      {"id": "plan90_overview", "label": "90日プランの流れを見る"},
+      {"id": "contact_overview", "label": "このサービスで相談する"},
+      {"id": "service_individual", "label": "他のサービスを見る"},
+      {"id": "back_to_main", "label": "メインメニューに戻る"}
+    ]
+  },
+
+  "plan90_overview": {
+    "id": "plan90_overview",
+    "type": "message",
+    "text": "**90日プラン - 全体スケジュール**\n\n90日間で、AI活用による経営刷新を実現します。\n\n各フェーズの詳細をご覧になりますか？",
+    "options": [
+      {"id": "plan90_schedule", "label": "全体スケジュールを見る"},
+      {"id": "plan90_phase1", "label": "第1フェーズ（1-30日目）"},
+      {"id": "plan90_phase2", "label": "第2フェーズ（31-60日目）"},
+      {"id": "plan90_phase3", "label": "第3フェーズ（61-90日目）"},
+      {"id": "back_to_main", "label": "メインメニューに戻る"}
+    ]
+  },
+
+  "plan90_schedule": {
+    "id": "plan90_schedule",
+    "type": "message",
+    "text": "**90日プラン - タイムライン**\n\n**1日目**\n経営者向けAIトレーニング開始\n\n**15日目**\n社内研修方針策定\n\n**31日目**\n幹部層向け研修開始\n\n**61日目**\n自社AI戦略策定開始\n\n**90日目**\n実行段階へ移行・収益最大化支援開始",
+    "options": [
+      {"id": "plan90_phase1", "label": "第1フェーズの詳細"},
+      {"id": "plan90_phase2", "label": "第2フェーズの詳細"},
+      {"id": "plan90_phase3", "label": "第3フェーズの詳細"},
+      {"id": "contact_overview", "label": "詳しく相談する"},
+      {"id": "back_to_main", "label": "メインメニューに戻る"}
+    ]
+  },
+
+  "plan90_phase1": {
+    "id": "plan90_phase1",
+    "type": "message",
+    "text": "**第1フェーズ（1-30日目）**\n\n**1日目：経営者向けAIトレーニング**\n• AIの基礎理解\n• 活用事例の学習\n• 導入戦略の習得\n\n**15日目：社内研修方針策定**\n• 自社に最適な研修計画を策定\n• 対象者・スケジュールの決定\n\n【ゴール】\n経営層のAI理解と社内展開の準備完了",
+    "options": [
+      {"id": "plan90_phase2", "label": "第2フェーズを見る"},
+      {"id": "plan90_schedule", "label": "全体スケジュールに戻る"},
+      {"id": "contact_overview", "label": "詳しく相談する"},
+      {"id": "back_to_main", "label": "メインメニューに戻る"}
+    ]
+  },
+
+  "plan90_phase2": {
+    "id": "plan90_phase2",
+    "type": "message",
+    "text": "**第2フェーズ（31-60日目）**\n\n**31日目：幹部層向け研修開始**\n• 幹部・管理職がAIを実務で活用開始\n• プロンプト設計・業務自動化の習得\n\n**45日目：実践フェーズ**\n• 各部門でのAI活用推進\n• 成功事例の蓄積\n\n【ゴール】\n幹部層がAIを使いこなせる状態に",
+    "options": [
+      {"id": "plan90_phase3", "label": "第3フェーズを見る"},
+      {"id": "plan90_schedule", "label": "全体スケジュールに戻る"},
+      {"id": "contact_overview", "label": "詳しく相談する"},
+      {"id": "back_to_main", "label": "メインメニューに戻る"}
+    ]
+  },
+
+  "plan90_phase3": {
+    "id": "plan90_phase3",
+    "type": "message",
+    "text": "**第3フェーズ（61-90日目）**\n\n**61日目：自社AI戦略策定開始**\n• 経営戦略・事業戦略にAIを組み込み\n• 新規事業構築の検討\n\n**90日目：実行段階へ移行**\n• 収益最大化に向けた継続支援開始\n• 自走可能な体制の確立\n\n【ゴール】\nAI活用が経営の一部として定着",
+    "options": [
+      {"id": "plan90_schedule", "label": "全体スケジュールに戻る"},
+      {"id": "pricing_overview", "label": "価格・プランを見る"},
+      {"id": "contact_overview", "label": "詳しく相談する"},
+      {"id": "back_to_main", "label": "メインメニューに戻る"}
+    ]
+  },
+
+  "contact_overview": {
+    "id": "contact_overview",
+    "type": "message",
+    "text": "**お問い合わせ方法**\n\nご相談・お問い合わせは以下の方法で承っております。",
+    "options": [
+      {"id": "contact_email", "label": "メールで相談"},
+      {"id": "contact_line", "label": "LINE公式アカウント"},
+      {"id": "contact_ai_monday", "label": "AI MONDAY（無料勉強会）"},
+      {"id": "back_to_main", "label": "メインメニューに戻る"}
+    ]
+  },
+
+  "contact_email": {
+    "id": "contact_email",
+    "type": "message",
+    "text": "**メールでのお問い合わせ**\n\n株式会社 Meta Heroes コーポレート本部\n\ninfo@meta-heroes.io\n\nお気軽にご相談ください。\n担当者より2営業日以内にご返信いたします。",
+    "options": [
+      {"id": "contact_line", "label": "LINE公式アカウントも見る"},
+      {"id": "contact_ai_monday", "label": "AI MONDAYについて知る"},
+      {"id": "back_to_main", "label": "メインメニューに戻る"}
+    ]
+  },
+
+  "contact_line": {
+    "id": "contact_line",
+    "type": "message",
+    "text": "**LINE公式アカウント**\n\nLINE公式アカウントでは、最新情報やイベント案内をお届けしています。\n\nまた、Instagram等のSNSでも情報発信中です。\n\n※LINE登録方法は、弊社Webサイトをご確認ください。",
+    "options": [
+      {"id": "contact_email", "label": "メールでも相談する"},
+      {"id": "contact_ai_monday", "label": "AI MONDAYについて知る"},
+      {"id": "back_to_main", "label": "メインメニューに戻る"}
+    ]
+  },
+
+  "contact_ai_monday": {
+    "id": "contact_ai_monday",
+    "type": "message",
+    "text": "**AI MONDAY - 継続型AI学習コミュニティ**\n\n【開催】毎週月曜日\n【参加費】無料\n【形式】Zoom / LINE登録制\n\n【内容】\n• 最新AI活用事例の紹介\n• 実践的なTipsの共有\n• ゲスト登壇者による講演\n\n【過去の登壇者】\n元スクウェア・エニックス米国社長 他\n\nまずは気軽にご参加ください！",
+    "options": [
+      {"id": "contact_email", "label": "参加方法をメールで問い合わせる"},
+      {"id": "contact_overview", "label": "他の問い合わせ方法を見る"},
+      {"id": "back_to_main", "label": "メインメニューに戻る"}
+    ]
+  },
+
+  "back_to_main": {
+    "id": "welcome",
+    "type": "redirect"
+  }
+}

@@ -1,0 +1,145 @@
+@import './variables';
+
+// ==========================================
+// レスポンシブミックスイン
+// ==========================================
+@mixin mobile {
+  @media (max-width: #{$breakpoint-tablet - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $breakpoint-tablet) and (max-width: #{$breakpoint-desktop - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $breakpoint-desktop) {
+    @content;
+  }
+}
+
+@mixin mobile-only {
+  @media (max-width: #{$breakpoint-tablet - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet-up {
+  @media (min-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin desktop-up {
+  @media (min-width: $breakpoint-desktop) {
+    @content;
+  }
+}
+
+// ==========================================
+// Flexbox ミックスイン
+// ==========================================
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+// ==========================================
+// ボタンベーススタイル
+// ==========================================
+@mixin button-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-md $spacing-xl;
+  font-size: $font-size-base;
+  font-weight: $font-weight-medium;
+  border-radius: $border-radius-full;
+  border: none;
+  cursor: pointer;
+  transition: all $transition-base;
+  text-decoration: none;
+  white-space: nowrap;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  @include mobile {
+    padding: $spacing-sm $spacing-lg;
+    font-size: $font-size-sm;
+  }
+}
+
+@mixin button-primary {
+  @include button-base;
+  background-color: $color-primary;
+  color: $color-white;
+  box-shadow: $box-shadow-md;
+
+  &:hover {
+    background-color: darken($color-primary, 10%);
+    box-shadow: $box-shadow-lg;
+  }
+}
+
+@mixin button-secondary {
+  @include button-base;
+  background-color: $color-secondary;
+  color: $color-white;
+  box-shadow: $box-shadow-md;
+
+  &:hover {
+    background-color: darken($color-secondary, 10%);
+    box-shadow: $box-shadow-lg;
+  }
+}
+
+// ==========================================
+// コンテナ
+// ==========================================
+@mixin container {
+  width: 100%;
+  max-width: $breakpoint-wide;
+  margin: 0 auto;
+  padding: 0 $spacing-lg;
+
+  @include mobile {
+    padding: 0 $spacing-md;
+  }
+}
+
+// ==========================================
+// テキスト省略
+// ==========================================
+@mixin text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// ==========================================
+// スムーズスクロール
+// ==========================================
+@mixin smooth-scroll {
+  scroll-behavior: smooth;
+}

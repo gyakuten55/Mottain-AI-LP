@@ -1,0 +1,90 @@
+.contactButtonsSection {
+  padding: 60px 20px;
+  background-color: #FFFFFF;
+
+  @media (max-width: 768px) {
+    padding: 40px 20px;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
+.documentButton,
+.consultationButton {
+  padding: 24px 80px;
+  font-size: 32px;
+  font-weight: 700;
+  border-radius: 60px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 3px solid;
+  min-width: 400px;
+  letter-spacing: 0.05em;
+
+  @media (max-width: 1024px) {
+    padding: 20px 60px;
+    font-size: 28px;
+    min-width: 350px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 18px 40px;
+    font-size: 24px;
+    min-width: 300px;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 16px 32px;
+    font-size: 20px;
+    min-width: auto;
+  }
+}
+
+.documentButton {
+  background-color: #3A3A3A;
+  color: #FFFFFF;
+  border-color: #FFFFFF;
+
+  &:hover {
+    background-color: #2A2A2A;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.consultationButton {
+  background-color: #00A0E9;
+  color: #FFFFFF;
+  border-color: #00A0E9;
+
+  &:hover {
+    background-color: #0090D9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 160, 233, 0.3);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}

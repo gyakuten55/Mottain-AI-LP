@@ -1,0 +1,59 @@
+.finalCTASection {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #FF8C00 0%, #FF4500 100%);
+  position: relative;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    padding: 60px 20px;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.mainTitle {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 32px;
+  letter-spacing: 0.05em;
+
+  @media (max-width: 1024px) {
+    font-size: 40px;
+    margin-bottom: 28px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 32px;
+    margin-bottom: 24px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+}
+
+.subtitle {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+
+  @media (max-width: 1024px) {
+    font-size: 28px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,336 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.pricingSection {
+  padding: 80px 0;
+  background-color: #ffffff;
+
+  @include mobile {
+    padding: 60px 0;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $spacing-md;
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 48px;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 24px;
+
+  @include mobile {
+    font-size: 32px;
+  }
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 48px;
+
+  p {
+    font-size: 48px;
+    line-height: 1.8;
+    margin: 8px 0;
+    color: #FF6B35;
+
+    @include mobile {
+      font-size: 32px;
+    }
+
+    &.subsidy {
+      font-weight: bold;
+    }
+
+    &.proposal {
+      font-weight: normal;
+    }
+  }
+}
+
+.pricingCards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 32px;
+  padding-top: 40px;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding-top: 50px;
+  }
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding-top: 40px;
+  }
+}
+
+.pricingCard {
+  background: #ffffff;
+  border-radius: 0;
+  overflow: visible;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.cardHeader {
+  padding: 24px;
+  color: #ffffff;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+
+  h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+
+    @include mobile {
+      font-size: 20px;
+    }
+  }
+
+  &.plan5 {
+    background: linear-gradient(135deg, #FDB44B 0%, #FFCC66 100%);
+  }
+
+  &.plan10 {
+    background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%);
+  }
+
+  &.plan15 {
+    background: linear-gradient(135deg, #4A5568 0%, #2D3748 100%);
+  }
+}
+
+.recommendedBadge {
+  position: absolute;
+  top: -35px;
+  right: -20px;
+  background: #998500;
+  color: #ffffff;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+
+  @include mobile {
+    width: 70px;
+    height: 70px;
+    font-size: 12px;
+    right: -10px;
+    top: -25px;
+  }
+}
+
+.cardBody {
+  padding: 32px 24px;
+  background: #f5f5f5;
+  min-height: 620px;
+  display: flex;
+  flex-direction: column;
+
+  @include mobile {
+    padding: 24px 16px;
+    min-height: auto;
+  }
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333333;
+  margin-bottom: 24px;
+  text-align: center;
+
+  @include mobile {
+    font-size: 14px;
+  }
+}
+
+.pricing {
+  margin-bottom: 24px;
+}
+
+.initialFee {
+  text-align: center;
+  margin-bottom: 8px;
+
+  .feeLabel {
+    display: block;
+    font-size: 14px;
+    color: #FF6B35;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+
+  .feeAmount {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 4px;
+
+    .amount {
+      font-size: 48px;
+      font-weight: bold;
+      color: #FF6B35;
+      line-height: 1;
+
+      @include mobile {
+        font-size: 40px;
+      }
+    }
+
+    .unit {
+      font-size: 20px;
+      font-weight: bold;
+      color: #FF6B35;
+    }
+
+    .tax {
+      font-size: 14px;
+      color: #666666;
+      margin-left: 4px;
+    }
+  }
+
+  .arrow {
+    font-size: 24px;
+    color: #FF6B35;
+    margin: 4px 0;
+  }
+}
+
+.monthlyFee {
+  text-align: center;
+
+  .feeLabel {
+    display: block;
+    font-size: 12px;
+    color: #666666;
+    margin-bottom: 4px;
+  }
+
+  .feeAmount {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 4px;
+
+    .amount {
+      font-size: 28px;
+      font-weight: bold;
+      color: #333333;
+      line-height: 1;
+
+      @include mobile {
+        font-size: 24px;
+      }
+    }
+
+    .unit {
+      font-size: 16px;
+      font-weight: bold;
+      color: #333333;
+    }
+
+    .tax {
+      font-size: 12px;
+      color: #666666;
+      margin-left: 4px;
+    }
+  }
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px 0;
+  background: #ffffff;
+  border-radius: 4px;
+  padding: 16px;
+
+  li {
+    font-size: 14px;
+    line-height: 2;
+    padding: 4px 0;
+
+    @include mobile {
+      font-size: 13px;
+    }
+  }
+
+  .featureBold {
+    color: #333333;
+    font-weight: bold;
+  }
+
+  .featureGray {
+    color: #999999;
+  }
+}
+
+.conditions {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: auto;
+  min-height: 280px;
+
+  li {
+    font-size: 11px;
+    line-height: 1.6;
+    color: #666666;
+    margin-bottom: 8px;
+    padding-left: 12px;
+    position: relative;
+
+    @include mobile {
+      font-size: 10px;
+    }
+
+    &::before {
+      content: '●';
+      position: absolute;
+      left: 0;
+      font-size: 8px;
+      top: 3px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.footnote {
+  text-align: center;
+  font-size: 14px;
+  color: #666666;
+  margin-top: 32px;
+
+  @include mobile {
+    font-size: 12px;
+  }
+}

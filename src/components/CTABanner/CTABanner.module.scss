@@ -1,0 +1,45 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.ctaBanner {
+  background: linear-gradient(90deg, #FF6B35 0%, #FF8C42 100%);
+  padding: 60px 0;
+
+  @include mobile {
+    padding: 40px 0;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $spacing-md;
+  text-align: center;
+}
+
+.ctaButton {
+  background: #ffffff;
+  color: #FF6B35;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 20px 60px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+  @include mobile {
+    font-size: 18px;
+    padding: 16px 40px;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
