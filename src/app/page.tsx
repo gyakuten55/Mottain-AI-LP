@@ -192,7 +192,7 @@ export default function Home() {
           </div>
 
           <p className={styles.solutionDescription}>
-            幹部層の"AI活用力"を<span className={styles.highlight}>基礎</span>から<span className={styles.highlight}>実践</span>まで引き上げ、<br />
+            幹部層の&quot;AI活用力&quot;を<span className={styles.highlight}>基礎</span>から<span className={styles.highlight}>実践</span>まで引き上げ、<br />
             <span className={styles.yellowMarker}>組織全体で生産性と収益性を高める</span><span className={styles.highlight2}>伴走型リスキリングプログラム</span>
           </p>
         </div>
@@ -288,7 +288,7 @@ export default function Home() {
         <div className={styles.serviceContainer}>
           <h2 className={styles.serviceTitle}>サービス概要</h2>
           <p className={styles.serviceSubtitle}>
-            3つのプログラムで、<span className={styles.serviceHighlight}>"AIを使いこなす組織"</span>をつくる
+            3つのプログラムで、<span className={styles.serviceHighlight}>&quot;AIを使いこなす組織&quot;</span>をつくる
           </p>
 
           <div className={styles.serviceCards}>

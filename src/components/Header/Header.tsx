@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from './Header.module.scss';
 
 const Header = () => {
@@ -42,7 +43,7 @@ const Header = () => {
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
       <div className={styles.container}>
         {/* ロゴ */}
-        <a href="/" className={styles.logo}>
+        <Link href="/" className={styles.logo}>
           <Image
             src="/images/logo.png"
             alt="Mottain-AI Heroes"
@@ -51,7 +52,7 @@ const Header = () => {
             className={styles.logoImage}
             priority
           />
-        </a>
+        </Link>
 
         {/* デスクトップナビゲーション */}
         <nav className={styles.nav}>

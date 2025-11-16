@@ -7,7 +7,7 @@ export default function FinalCTASection() {
     <section className={styles.finalCTASection}>
       <div className={styles.container}>
         <h2 className={styles.mainTitle}>
-          "モッタイナイ"をなくすAI活用！
+          &quot;モッタイナイ&quot;をなくすAI活用！
         </h2>
         <p className={styles.subtitle}>
           あなたの会社の収益を最大化するための<br />
