@@ -57,16 +57,15 @@ const Header = () => {
         {/* デスクトップナビゲーション */}
         <nav className={styles.nav}>
           <a
-            href="#materials"
+            href="#"
             className={`${styles.navButton} ${styles.secondary}`}
-            onClick={(e) => handleNavClick(e, 'materials')}
+            onClick={(e) => { e.preventDefault(); alert('準備中です'); }}
           >
             資料請求
           </a>
           <a
-            href="#consultation"
+            href="mailto:info@meta-heroes.io"
             className={`${styles.navButton} ${styles.primary}`}
-            onClick={(e) => handleNavClick(e, 'consultation')}
           >
             無料相談
           </a>
@@ -87,16 +86,15 @@ const Header = () => {
       {/* モバイルメニュー */}
       <div className={`${styles.mobileMenu} ${isMenuOpen ? styles.open : ''}`}>
         <a
-          href="#materials"
+          href="#"
           className={`${styles.mobileNavButton} ${styles.secondary}`}
-          onClick={(e) => handleNavClick(e, 'materials')}
+          onClick={(e) => { e.preventDefault(); alert('準備中です'); }}
         >
           資料請求
         </a>
         <a
-          href="#consultation"
+          href="mailto:info@meta-heroes.io"
           className={`${styles.mobileNavButton} ${styles.primary}`}
-          onClick={(e) => handleNavClick(e, 'consultation')}
         >
           無料相談
         </a>

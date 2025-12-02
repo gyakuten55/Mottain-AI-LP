@@ -686,13 +686,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* 右側：ロードマップ（プレースホルダー） */}
-            <div className={styles.consultingRoadmapCard}>
-              <div className={styles.consultingRoadmapPlaceholder}>
-                <p className={styles.consultingRoadmapText}>ロードマップ</p>
-                <p className={styles.consultingRoadmapNote}>※画像は後から追加予定</p>
-              </div>
-            </div>
           </div>
         </div>
       </section>

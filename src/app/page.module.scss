@@ -11,11 +11,22 @@
   margin: 0;
   padding: 0;
   overflow: hidden;
+
+  @include mobile {
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 16 / 9;
+    margin-top: 70px;
+  }
 }
 
 .firstViewImage {
   object-fit: cover;
   object-position: center;
+
+  @include mobile {
+    object-fit: contain;
+  }
 }
 
 // ==========================================
@@ -90,7 +101,7 @@
 // 問題提起セクション
 // ==========================================
 .problemSection {
-  width: 100%;
+  overflow-x: hidden;
 }
 
 // 上部エリア
@@ -122,7 +133,6 @@
   margin-bottom: 56px;
   letter-spacing: 0;
   line-height: 1.5;
-  width: 100%;
   display: block;
 
   @include mobile {
@@ -371,9 +381,24 @@
   padding: 100px 24px;
   position: relative;
   min-height: 600px;
+  overflow-x: hidden;
 
-  @include mobile {
-    padding: 70px 20px;
+  @media (max-width: 1024px) {
+    padding: 80px 20px;
+    min-height: 500px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 60px 20px;
+    min-height: auto;
+  }
+
+  @media (max-width: 480px) {
+    padding: 40px 16px;
+  }
+
+  @media (max-width: 380px) {
+    padding: 32px 12px;
   }
 }
 
@@ -403,7 +428,9 @@
   margin-bottom: 40px;
 
   @include mobile {
-    gap: 12px;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
     margin-bottom: 30px;
   }
 }
@@ -441,9 +468,25 @@
   margin-bottom: 80px;
   line-height: 1.4;
 
-  @include mobile {
-    font-size: 36px;
-    margin-bottom: 50px;
+  @media (max-width: 1024px) {
+    font-size: 48px;
+    margin-bottom: 60px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 24px;
+    margin-bottom: 30px;
+    line-height: 1.3;
+  }
+
+  @media (max-width: 380px) {
+    font-size: 20px;
+    margin-bottom: 24px;
   }
 }
 
@@ -452,12 +495,20 @@
   justify-content: center;
   gap: 50px;
   margin-bottom: 80px;
+  flex-wrap: wrap;
 
-  @include mobile {
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
+  @media (max-width: 1024px) {
+    gap: 32px;
+  }
+
+  @media (max-width: 768px) {
+    gap: 24px;
     margin-bottom: 50px;
+  }
+
+  @media (max-width: 480px) {
+    gap: 16px;
+    margin-bottom: 40px;
   }
 }
 
@@ -475,11 +526,53 @@
   align-items: center;
   justify-content: center;
   padding: 25px;
-  box-shadow: inset 0 2px 8px rgba(255, 140, 80, 0.2);
+  box-shadow: inset 0 2px 8px rgba(255, 140, 80, 0.2), 0 4px 12px rgba(255, 87, 34, 0.15);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: default;
 
-  @include mobile {
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: inset 0 2px 8px rgba(255, 140, 80, 0.3), 0 8px 20px rgba(255, 87, 34, 0.25);
+    border-color: #ff4411;
+  }
+
+  @media (max-width: 1024px) {
     width: 200px;
     height: 200px;
+    padding: 20px;
+  }
+
+  @media (max-width: 768px) {
+    width: 160px;
+    height: 160px;
+    padding: 16px;
+    border: 3px solid #ff5722;
+  }
+
+  @media (max-width: 480px) {
+    width: 120px;
+    height: 120px;
+    padding: 12px;
+    border: 2px solid #ff5722;
+  }
+
+  @media (max-width: 380px) {
+    width: 90px;
+    height: 90px;
+    padding: 8px;
+  }
+
+  @media (max-width: 360px) {
+    width: 80px;
+    height: 80px;
+    padding: 6px;
+    border: 2px solid #ff5722;
+  }
+
+  @media (max-width: 340px) {
+    width: 70px;
+    height: 70px;
+    padding: 5px;
   }
 }
 
@@ -490,8 +583,31 @@
   line-height: 1.6;
   text-align: center;
 
-  @include mobile {
+  @media (max-width: 1024px) {
     font-size: 20px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  @media (max-width: 380px) {
+    font-size: 10px;
+  }
+
+  @media (max-width: 360px) {
+    font-size: 9px;
+    line-height: 1.3;
+  }
+
+  @media (max-width: 340px) {
+    font-size: 8px;
   }
 }
 
@@ -532,6 +648,7 @@
   background: rgba(255, 235, 220, 1);
   padding: 0 24px 0;
   position: relative;
+  overflow-x: hidden;
 
   @include mobile {
     padding: 0 20px 0;
@@ -545,8 +662,20 @@
   position: relative;
   z-index: 1;
 
-  @include mobile {
-    padding: 70px 0 60px;
+  @media (max-width: 1024px) {
+    padding: 80px 0 60px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 60px 0 50px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 40px 0 32px;
+  }
+
+  @media (max-width: 380px) {
+    padding: 32px 0 24px;
   }
 }
 
@@ -601,22 +730,36 @@
 }
 
 .programCards {
-  display: flex;
-  flex-direction: column;
-  gap: 60px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px 32px;
 
-  @include mobile {
-    gap: 45px;
+  @media (max-width: 768px) {
+    gap: 32px 24px;
+  }
+
+  @media (max-width: 480px) {
+    gap: 24px 16px;
+  }
+
+  @media (max-width: 380px) {
+    grid-template-columns: 1fr;
+    gap: 24px;
   }
 }
 
 .programCard {
   display: flex;
+  flex-direction: row;
   background-color: $color-white;
   border-radius: 16px;
   overflow: visible;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   position: relative;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 
   @include mobile {
     border-radius: 12px;
@@ -635,32 +778,19 @@
   writing-mode: horizontal-tb;
   position: relative;
 
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: -32px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 0;
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
-    border-top: 20px solid #a0a0a0;
+  @media (max-width: 768px) {
+    min-width: auto;
+    width: 100%;
+    padding: 16px 20px;
+    font-size: 20px;
   }
 
   @include mobile {
     font-size: 18px;
-    padding: 24px 20px;
-    min-width: 80px;
-
-    &::after {
-      bottom: -24px;
-      border-left: 15px solid transparent;
-      border-right: 15px solid transparent;
-      border-top: 15px solid #a0a0a0;
-    }
+    padding: 14px 16px;
   }
 }
+
 
 .day1 {
   background: #ffb340;
@@ -693,8 +823,12 @@
   flex-direction: column;
   justify-content: center;
 
-  @include mobile {
+  @media (max-width: 768px) {
     padding: 20px 24px;
+  }
+
+  @include mobile {
+    padding: 16px 20px;
   }
 }
 
@@ -705,9 +839,14 @@
   margin: 0 0 8px 0;
   line-height: 1.4;
 
+  @media (max-width: 768px) {
+    font-size: 20px;
+    margin-bottom: 6px;
+  }
+
   @include mobile {
     font-size: 18px;
-    margin-bottom: 6px;
+    margin-bottom: 4px;
   }
 }
 
@@ -717,8 +856,14 @@
   margin: 0;
   line-height: 1.5;
 
-  @include mobile {
+  @media (max-width: 768px) {
     font-size: 14px;
+    line-height: 1.4;
+  }
+
+  @include mobile {
+    font-size: 13px;
+    line-height: 1.4;
   }
 }
 
@@ -728,6 +873,7 @@
 .ctaSection {
   background: linear-gradient(180deg, #ff7e3a 0%, #ff5722 100%);
   padding: 80px 24px;
+  overflow-x: hidden;
 
   @include mobile {
     padding: 60px 20px;
@@ -774,6 +920,7 @@
   background-color: #e8e8e8;
   padding: 100px 24px 120px;
   position: relative;
+  overflow-x: hidden;
 
   @include mobile {
     padding: 70px 20px 80px;
@@ -820,9 +967,22 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
 
-  @include mobile {
-    grid-template-columns: 1fr;
+  @media (max-width: 1024px) {
     gap: 24px;
+  }
+
+  @media (max-width: 768px) {
+    gap: 20px;
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  @media (max-width: 380px) {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 }
 
@@ -830,13 +990,14 @@
   background-color: $color-white;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform $transition-base;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   flex-direction: column;
 
   &:hover {
-    transform: translateY(-4px);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.08);
   }
 }
 
@@ -863,15 +1024,23 @@
   align-items: center;
   flex: 1;
 
-  @include mobile {
+  @media (max-width: 768px) {
     padding: 28px 20px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 24px 16px;
+  }
+
+  @include mobile {
+    padding: 20px 12px;
   }
 }
 
 .serviceCardLogo {
   display: flex;
-  flex-direction: row;
-  align-items: flex-end;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   gap: 8px;
   margin-bottom: 24px;
@@ -894,9 +1063,15 @@
 .serviceCardName {
   font-size: 20px;
   color: #2d3748;
+  writing-mode: horizontal-tb;
+  line-height: 1.4;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
 
   @include mobile {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
@@ -920,9 +1095,19 @@
   font-weight: $font-weight-bold;
   color: #ff5722;
   margin: 0;
+  writing-mode: horizontal-tb;
+  line-height: 1.3;
+
+  @media (max-width: 768px) {
+    font-size: 26px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 22px;
+  }
 
   @include mobile {
-    font-size: 24px;
+    font-size: 20px;
   }
 }
 
@@ -932,6 +1117,12 @@
 
 .cardHeroes .targetValue {
   color: #ff6633;
+}
+
+.cardPartners {
+  @media (max-width: 480px) and (min-width: 381px) {
+    grid-column: span 2;
+  }
 }
 
 .cardPartners .targetValue {
@@ -978,8 +1169,12 @@
   margin: 0;
   line-height: 1.5;
 
-  @include mobile {
+  @media (max-width: 480px) {
     font-size: 16px;
+  }
+
+  @include mobile {
+    font-size: 14px;
   }
 }
 
@@ -989,8 +1184,12 @@
   color: #2d3748;
   margin: 4px 0;
 
-  @include mobile {
+  @media (max-width: 480px) {
     font-size: 16px;
+  }
+
+  @include mobile {
+    font-size: 14px;
   }
 }
 
@@ -1051,6 +1250,7 @@
 // Mottain-AI リーダーズ詳細セクション
 // ==========================================
 .leadersDetailSection {
+  overflow-x: hidden;
   background-color: $color-white;
   padding: 0;
   position: relative;
@@ -1078,7 +1278,8 @@
 
 .leadersDetailHeader {
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   gap: 12px;
   margin-bottom: 16px;
@@ -1205,11 +1406,24 @@
   row-gap: 48px;
   column-gap: 48px;
 
-  @include mobile {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px 12px;
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 16px;
     row-gap: 40px;
-    column-gap: 40px;
+    column-gap: 32px;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 12px;
+    row-gap: 32px;
+    column-gap: 24px;
+  }
+
+  @media (max-width: 480px) {
+    gap: 24px 12px;
+    row-gap: 24px;
+    column-gap: 16px;
   }
 }
 
@@ -1217,13 +1431,15 @@
   background-color: $color-white;
   border-radius: 12px;
   overflow: visible;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06), 0 1px 4px rgba(0, 0, 0, 0.04);
   border: 2px solid #e8e8e8;
-  transition: transform $transition-base;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
 
   &:hover {
-    transform: translateY(-2px);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.06);
+    border-color: #ffb340;
   }
 }
 
@@ -1299,6 +1515,7 @@
 // Mottain-AI ヒーローズ詳細セクション
 // ==========================================
 .heroesDetailSection {
+  overflow-x: hidden;
   background-color: $color-white;
   padding: 0;
   position: relative;
@@ -1326,7 +1543,8 @@
 
 .heroesDetailHeader {
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   gap: 12px;
   margin-bottom: 16px;
@@ -1571,6 +1789,7 @@
 // Mottain-AI リーダーズ AI活用戦略コンサルティング
 // ==========================================
 .consultingDetailSection {
+  overflow-x: hidden;
   background-color: $color-white;
   padding: 0;
   position: relative;
@@ -1644,7 +1863,7 @@
 
 .consultingDetailContent {
   display: grid;
-  grid-template-columns: 280px 1fr 380px;
+  grid-template-columns: 280px 1fr;
   gap: 32px;
 
   @include mobile {
@@ -1751,7 +1970,6 @@
 
 .consultingCirclesContainer {
   position: relative;
-  width: 100%;
   max-width: 400px;
   height: 200px;
 
@@ -1771,7 +1989,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform $transition-base;
 
   span {
     font-size: 14px;
@@ -1780,11 +1997,6 @@
     text-align: center;
     line-height: 1.5;
     z-index: 2;
-  }
-
-  &:hover {
-    transform: scale(1.05);
-    background-color: rgba(255, 0, 0, 0.25);
   }
 
   @include mobile {

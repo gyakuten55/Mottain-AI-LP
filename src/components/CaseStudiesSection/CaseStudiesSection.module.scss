@@ -57,7 +57,7 @@ $color-nav-button: #ff5757;
   padding: 20px 80px 80px;
 
   @include mobile {
-    padding: 20px 60px 70px;
+    padding: 20px 20px 70px;
   }
 }
 
@@ -71,7 +71,7 @@ $color-nav-button: #ff5757;
   min-height: 550px;
 
   @include mobile {
-    padding: 30px 20px;
+    padding: 20px 14px;
     min-height: auto;
   }
 }
@@ -79,6 +79,10 @@ $color-nav-button: #ff5757;
 // 会社情報
 .companyInfo {
   margin-bottom: 30px;
+
+  @include mobile {
+    margin-bottom: 16px;
+  }
 }
 
 .companyName {
@@ -88,7 +92,7 @@ $color-nav-button: #ff5757;
   margin-bottom: 8px;
 
   @include mobile {
-    font-size: 28px;
+    font-size: 24px;
   }
 }
 
@@ -107,6 +111,10 @@ $color-nav-button: #ff5757;
   border-radius: 12px;
   padding: 24px 20px;
   margin-bottom: 30px;
+
+  @include mobile {
+    padding: 12px 10px;
+  }
 }
 
 .challengeItem {
@@ -120,7 +128,8 @@ $color-nav-button: #ff5757;
   }
 
   @include mobile {
-    margin-bottom: 12px;
+    gap: 8px;
+    margin-bottom: 8px;
   }
 }
 
@@ -138,9 +147,9 @@ $color-nav-button: #ff5757;
   font-weight: $font-weight-bold;
 
   @include mobile {
-    width: 44px;
-    height: 44px;
-    font-size: 13px;
+    width: 38px;
+    height: 38px;
+    font-size: 11px;
   }
 }
 
@@ -153,7 +162,7 @@ $color-nav-button: #ff5757;
 
   @include mobile {
     font-size: 14px;
-    padding-top: 10px;
+    padding-top: 4px;
   }
 }
 
@@ -165,7 +174,7 @@ $color-nav-button: #ff5757;
 
   @include mobile {
     flex-direction: column;
-    gap: 24px;
+    gap: 16px;
   }
 }
 
@@ -230,12 +239,10 @@ $color-nav-button: #ff5757;
 }
 
 .barBefore {
-  width: 100%;
   background: $color-bar-before;
 }
 
 .barAfterWrapper {
-  width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -249,6 +256,7 @@ $color-nav-button: #ff5757;
   align-items: center;
   justify-content: center;
   padding: 0 16px;
+  white-space: nowrap;
 }
 
 .barAfterRight {
@@ -259,6 +267,7 @@ $color-nav-button: #ff5757;
   align-items: center;
   justify-content: center;
   padding: 0 16px;
+  white-space: nowrap;
 }
 
 .barText {
@@ -266,6 +275,7 @@ $color-nav-button: #ff5757;
   font-weight: $font-weight-bold;
   color: $color-white;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  white-space: nowrap;
 
   @include mobile {
     font-size: 11px;
@@ -276,6 +286,11 @@ $color-nav-button: #ff5757;
 .savingsDisplay {
   text-align: center;
   min-width: 200px;
+
+  @include mobile {
+    min-width: auto;
+    width: 100%;
+  }
 }
 
 .savingsPeriod {
@@ -296,7 +311,8 @@ $color-nav-button: #ff5757;
   line-height: 1.2;
 
   @include mobile {
-    font-size: 32px;
+    font-size: 28px;
+    word-break: keep-all;
   }
 }
 
@@ -337,12 +353,12 @@ $color-nav-button: #ff5757;
   }
 
   @include mobile {
-    width: 48px;
-    height: 48px;
+    width: 40px;
+    height: 40px;
 
     svg {
-      width: 20px;
-      height: 20px;
+      width: 16px;
+      height: 16px;
     }
   }
 }
@@ -351,7 +367,7 @@ $color-nav-button: #ff5757;
   left: 0;
 
   @include mobile {
-    left: 5px;
+    left: 2px;
   }
 }
 
@@ -359,7 +375,7 @@ $color-nav-button: #ff5757;
   right: 0;
 
   @include mobile {
-    right: 5px;
+    right: 2px;
   }
 }
 

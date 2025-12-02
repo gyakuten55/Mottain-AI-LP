@@ -7,12 +7,15 @@ export default function ContactButtonsSection() {
     <section className={styles.contactButtonsSection}>
       <div className={styles.container}>
         <div className={styles.buttonGroup}>
-          <button className={styles.documentButton}>
+          <button
+            className={styles.documentButton}
+            onClick={() => alert('準備中です')}
+          >
             資料請求
           </button>
-          <button className={styles.consultationButton}>
+          <a href="mailto:info@meta-heroes.io" className={styles.consultationButton}>
             無料相談
-          </button>
+          </a>
         </div>
       </div>
     </section>

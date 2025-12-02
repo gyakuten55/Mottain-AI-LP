@@ -18,6 +18,8 @@
 html {
   @include smooth-scroll;
   font-size: $font-size-base;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 body {
@@ -28,6 +30,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  max-width: 100vw;
 }
 
 // ==========================================
@@ -85,4 +88,55 @@ section {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
+}
+
+// ==========================================
+// スタイリッシュな追加機能
+// ==========================================
+
+// テキスト選択時のカラー
+::selection {
+  background-color: rgba(255, 87, 34, 0.3);
+  color: #2d3748;
+}
+
+::-moz-selection {
+  background-color: rgba(255, 87, 34, 0.3);
+  color: #2d3748;
+}
+
+// カスタムスクロールバー (Webkit)
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ff7e3a 0%, #ff5722 100%);
+  border-radius: 6px;
+  transition: background 0.3s ease;
+
+  &:hover {
+    background: linear-gradient(180deg, #ff6633 0%, #ff4411 100%);
+  }
+}
+
+// フォーカス状態の統一
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #ff5722;
+  outline-offset: 2px;
+}
+
+// すべてのインタラクティブ要素にスムーズなトランジション
+* {
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }

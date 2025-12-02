@@ -4,6 +4,7 @@
 .pricingSection {
   padding: 80px 0;
   background-color: #ffffff;
+  overflow-x: hidden;
 
   @include mobile {
     padding: 60px 0;
@@ -59,16 +60,20 @@
   margin-bottom: 32px;
   padding-top: 40px;
 
-  @include tablet {
-    grid-template-columns: 1fr;
-    gap: 32px;
-    padding-top: 50px;
+  @media (max-width: 1024px) {
+    gap: 20px;
   }
 
-  @include mobile {
+  @media (max-width: 767px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding-top: 32px;
+  }
+
+  @media (max-width: 479px) {
     grid-template-columns: 1fr;
     gap: 24px;
-    padding-top: 40px;
+    padding-top: 24px;
   }
 }
 
@@ -76,12 +81,18 @@
   background: #ffffff;
   border-radius: 0;
   overflow: visible;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transform: translateY(-8px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12), 0 8px 16px rgba(0, 0, 0, 0.08);
+  }
+
+  &:nth-child(3) {
+    @media (max-width: 767px) and (min-width: 480px) {
+      grid-column: span 2;
+    }
   }
 }
 
@@ -99,6 +110,10 @@
     font-weight: bold;
     margin: 0;
     text-align: center;
+
+    @media (max-width: 1024px) {
+      font-size: 22px;
+    }
 
     @include mobile {
       font-size: 20px;
@@ -135,12 +150,20 @@
   justify-content: center;
   z-index: 10;
 
-  @include mobile {
-    width: 70px;
-    height: 70px;
-    font-size: 12px;
+  @media (max-width: 767px) {
+    width: 60px;
+    height: 60px;
+    font-size: 11px;
     right: -10px;
-    top: -25px;
+    top: -20px;
+  }
+
+  @include mobile {
+    width: 55px;
+    height: 55px;
+    font-size: 10px;
+    right: -8px;
+    top: -18px;
   }
 }
 
@@ -151,8 +174,12 @@
   display: flex;
   flex-direction: column;
 
+  @media (max-width: 767px) {
+    padding: 28px 20px;
+  }
+
   @include mobile {
-    padding: 24px 16px;
+    padding: 20px 14px;
     min-height: auto;
   }
 }
@@ -164,8 +191,12 @@
   margin-bottom: 24px;
   text-align: center;
 
-  @include mobile {
+  @media (max-width: 767px) {
     font-size: 14px;
+  }
+
+  @include mobile {
+    font-size: 13px;
   }
 }
 
@@ -197,8 +228,12 @@
       color: #FF6B35;
       line-height: 1;
 
+      @media (max-width: 767px) {
+        font-size: 36px;
+      }
+
       @include mobile {
-        font-size: 40px;
+        font-size: 32px;
       }
     }
 
@@ -244,8 +279,12 @@
       color: #333333;
       line-height: 1;
 
+      @media (max-width: 767px) {
+        font-size: 22px;
+      }
+
       @include mobile {
-        font-size: 24px;
+        font-size: 20px;
       }
     }
 
@@ -276,8 +315,14 @@
     line-height: 2;
     padding: 4px 0;
 
-    @include mobile {
+    @media (max-width: 767px) {
       font-size: 13px;
+      line-height: 1.8;
+    }
+
+    @include mobile {
+      font-size: 12px;
+      line-height: 1.8;
     }
   }
 
@@ -306,8 +351,12 @@
     padding-left: 12px;
     position: relative;
 
+    @media (max-width: 767px) {
+      font-size: 11px;
+    }
+
     @include mobile {
-      font-size: 10px;
+      font-size: 11px;
     }
 
     &::before {
