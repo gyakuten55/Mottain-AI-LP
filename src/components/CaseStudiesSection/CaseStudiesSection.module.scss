@@ -1,5 +1,5 @@
-@import '../../styles/variables.scss';
-@import '../../styles/mixins.scss';
+@use '../../styles/variables.scss' as *;
+@use '../../styles/mixins.scss' as *;
 
 // カスタムカラー（導入事例セクション用）
 $color-case-bg: #ffeee8;
