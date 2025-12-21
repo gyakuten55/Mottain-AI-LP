@@ -390,6 +390,13 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <head>
+        {/* JSON-LD構造化データ */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
+      <body>
         {/* Google Analytics (GA4) */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-3HPRZQ3M3F"
@@ -403,13 +410,6 @@ export default function RootLayout({
             gtag('config', 'G-3HPRZQ3M3F');
           `}
         </Script>
-        {/* JSON-LD構造化データ */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-      </head>
-      <body>
         <Header />
         <main>
           {children}
